@@ -17,6 +17,8 @@ def index(request):
     response = HttpResponse("hello world!")
     response.status_code = 200
     response.set_cookie('A', "1", max_age=300)
+    request.session['sess'] = "3"
+    request.session['qwer'] = "4"
     return response
 
 
@@ -25,6 +27,11 @@ def say(request):
     print(A)
     print(type(A))
     url = reverse('users:index')
+    sess = request.session.get('sess', 0)
+    print(sess)
+    qwer = request.session.get('qwer', 0)
+    print(qwer)
+
     return HttpResponse(url)
 
 

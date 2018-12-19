@@ -21,5 +21,5 @@ urlpatterns = [
 
     # 添加
     url(r'^users/', include('users.urls', namespace='users')),
-    url(r'^$', include('users.urls', namespace='users')),
+    url(r'^', include('users.urls')),
 ]

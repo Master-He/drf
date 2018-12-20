@@ -37,3 +37,8 @@ def say(request):
 
 def header(request):
     return redirect(reverse('users:index'))
+
+
+def demo_view(request):
+    print("view 视图被调用")
+    return HttpResponse('OK')

@@ -52,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'users.middleware.my_middleware', # 添加自定义的中间件
 ]
 
 ROOT_URLCONF = 'drf.urls'

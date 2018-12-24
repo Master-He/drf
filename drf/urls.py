@@ -20,6 +20,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     # 添加
-    url(r'^users/', include('users.urls', namespace='users')),
+    # url(r'^users/', include('users.urls', namespace='users')),
     url(r'^', include('users.urls')),
 ]

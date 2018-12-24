@@ -17,3 +17,9 @@ traitlets==4.3.2
 wcwidth==0.1.7
 win-unicode-console==0.5
 PyMySQL==0.9.3
+djangorestframework==3.8.2
+coreapi==1.32.0
+markdown==2.1.0
+django-filter==1.0.1
+django-crispy-forms==1.7.2
+django-guardian==1.1.1

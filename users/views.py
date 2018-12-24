@@ -3,7 +3,13 @@ from django.shortcuts import render, redirect
 # Create your views here.
 from django.http import HttpResponse
 from django.core.urlresolvers import reverse
+from rest_framework.viewsets import ModelViewSet
+from .serializers import BookInfoSerializer
+from .models import BookInfo
 
+class BookInfoViewSet(ModelViewSet):
+    queryset = BookInfo.objects.all()
+    serializer_class = BookInfoSerializer
 
 def index(request):
     """
@@ -26,13 +32,13 @@ def say(request):
     A = request.COOKIES.get("A", "123")
     print(A)
     print(type(A))
-    url = reverse('users:index')
+    # url = reverse('users:index')
     sess = request.session.get('sess', 0)
     print(sess)
     qwer = request.session.get('qwer', 0)
     print(qwer)
 
-    return HttpResponse(url)
+    return HttpResponse("OK")
 
 
 def header(request):
